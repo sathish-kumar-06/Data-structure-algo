@@ -9,7 +9,7 @@ public class SearchInRotatedSortedArray {
             int mid = (low + high) / 2;
             if (nums[mid] == target) return true;
 
-            if (nums[low] == nums[mid]) {
+            if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
                 low++;
                 high --;
                 continue;
@@ -28,6 +28,6 @@ public class SearchInRotatedSortedArray {
 
     public static void main(String[] args) {
         int[] nums = {2, 5, 6, 0, 0, 1, 2};
-        System.out.println(search(nums, 5));
+        System.out.println(search(nums, 0));
     }
 }
