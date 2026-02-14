@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, -1};
-        mergeInplace(arr,0,arr.length);
+        int[] arr = {2, 4, 1, 3, 5};
+        merge(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -31,7 +31,7 @@ public class MergeSort {
         int i = 0;
         int j = 0;
         int k = 0;
-
+        int count = 0;
         while (i < first.length && j < last.length) {
             if (first[i] < last[j]) {
                 finalArr[k] = first[i];
@@ -52,6 +52,7 @@ public class MergeSort {
             j++;
             k++;
         }
+        System.out.println(count);
         return finalArr;
     }
 
